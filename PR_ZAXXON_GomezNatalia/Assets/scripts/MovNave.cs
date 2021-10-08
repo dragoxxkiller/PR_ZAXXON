@@ -17,6 +17,8 @@ public class MovNave : MonoBehaviour
     void Start()
     {
 
+        
+
         SpeedHeight = 10F;
 
         SpeedSides = 10f;
@@ -34,7 +36,7 @@ public class MovNave : MonoBehaviour
     {
 
 
-
+        
 
 
         float desp1H = Input.GetAxis("Horizontal");
