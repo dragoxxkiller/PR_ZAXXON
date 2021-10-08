@@ -37,7 +37,7 @@ public class Instanciador : MonoBehaviour
 
 
 
-        intervalo = 0.2f;
+        intervalo = 0.4f;
 
 
         StartCoroutine("CrearColumna");

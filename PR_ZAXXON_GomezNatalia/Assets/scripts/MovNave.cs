@@ -72,7 +72,7 @@ public class MovNave : MonoBehaviour
 
 
 
-        if ((posZ <= 4f || desp1F < 0f) && (posZ > 1f || desp1F > 0f))
+        if ((posZ <= 10f || desp1F < 0f) && (posZ > 1f || desp1F > 0f))
         {
             transform.Translate(Vector3.forward * Time.deltaTime * SpeedForward * desp1F, Space.World);
         }
