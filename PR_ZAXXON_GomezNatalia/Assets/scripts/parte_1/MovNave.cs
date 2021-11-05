@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 public class MovNave : MonoBehaviour
 {
     public float SpeedForward;
@@ -9,7 +11,7 @@ public class MovNave : MonoBehaviour
     public float SpeedHeight;
     public float RotationSpeed;
 
-   
+    InitGame initGame;
 
     private Vector3 cubePosition = new Vector3(0, 0, 0);
 
@@ -29,26 +31,32 @@ public class MovNave : MonoBehaviour
 
         transform.position = new Vector3(0f, 1f, 0f);
 
+
+
+        initGame = GameObject.Find("InitGame").GetComponent<InitGame>();
     }
 
     // Update is called once per frame
     void Update()
     {
 
-
+        MoverNarve();
         
 
+    }
 
+    void MoverNarve()
+    {
         float desp1H = Input.GetAxis("Horizontal");
         float desp1V = Input.GetAxis("Vertical");
         float desp1F = Input.GetAxis("Forward");
         float desp1R = Input.GetAxis("Rotacion");
 
-        
 
-      
 
-       
+
+
+
 
         float posX = transform.position.x;
         float posY = transform.position.y;
@@ -60,7 +68,7 @@ public class MovNave : MonoBehaviour
 
         if ((posX <= 14f || desp1H < 0f) && (posX > -14f || desp1H > 0f))
         {
-            transform.Translate(Vector3.right * Time.deltaTime * SpeedSides * desp1H, Space.World);  
+            transform.Translate(Vector3.right * Time.deltaTime * SpeedSides * desp1H, Space.World);
         }
 
 
@@ -80,8 +88,35 @@ public class MovNave : MonoBehaviour
 
 
         transform.Rotate(0F, 0F, desp1R * Time.deltaTime * RotationSpeed);
-        print(desp1R);
+        //print(desp1R);
 
 
+       
     }
+
+
+    void OnTriggerEnter(Collider other)
+    {
+        print("He chocao con " + other.gameObject.tag);
+        if (other.gameObject.tag == "Obstaculo")
+        {
+
+
+            UIvidas.vidass--;
+
+
+            initGame.spaceshipSpeed = 0f;
+
+            initGame.alive = false;
+
+
+           
+
+
+        }
+    }
+
+
+
+
 }

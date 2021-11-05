@@ -19,7 +19,7 @@ public class Instanciador : MonoBehaviour
     {
         while (true)
         {
-            print("Hola");
+            //print("Hola");
             float randomX = Random.Range(-14f, 14f);
             Vector3 newPos = new Vector3(randomX, instantiatePos.position.y, instantiatePos.position.z);
             Instantiate(columna, newPos, Quaternion.identity);
