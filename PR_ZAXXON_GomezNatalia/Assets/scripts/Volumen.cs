@@ -1,23 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class UIvidas : MonoBehaviour
+public class Volumen : MonoBehaviour
 {
-
-    [SerializeField] Image vidas;
-    [SerializeField] Sprite[] monedas;
-
-    public static int vidass = 2;
+    [SerializeField] Text volumenText;
+    float volumen;
+    [SerializeField] Slider mySlider;
 
 
-   
     // Start is called before the first frame update
     void Start()
     {
         
-
 
 
     }
@@ -25,11 +22,7 @@ public class UIvidas : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        vidas.sprite = monedas[vidass];
-
-        print(vidass);
-
+        
 
 
     }
