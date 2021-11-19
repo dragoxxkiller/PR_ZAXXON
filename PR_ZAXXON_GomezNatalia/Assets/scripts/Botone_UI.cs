@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Botone_UI : MonoBehaviour
 {
-
-   /* [SerializeField] Text volumenText;
-    float volumen;
-    [SerializeField] Slider mySlider;*/
+    
+    /* [SerializeField] Text volumenText;
+     float volumen;
+     [SerializeField] Slider mySlider;*/
 
 
 
@@ -17,7 +18,10 @@ public class Botone_UI : MonoBehaviour
         SceneManager.LoadScene("Parte_1");
     }
 
-
+    public void Configuracion()
+    {
+        SceneManager.LoadScene("Configg");
+    }
 
     public void AlMenu()
     {
@@ -28,7 +32,7 @@ public class Botone_UI : MonoBehaviour
 
     public void CerrarJuego()
     {
-
+        Application.Quit();
     }
 
 
@@ -44,8 +48,8 @@ public class Botone_UI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
 
+       // ScoreText.text = "Score:" + 
 
 
     }

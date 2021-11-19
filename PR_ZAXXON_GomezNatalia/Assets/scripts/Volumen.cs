@@ -30,7 +30,8 @@ public class Volumen : MonoBehaviour
     }
     public void SubirVolumen()
     {
-        volumen = (mySlider.value);
+        volumen = ((int)
+            mySlider.value);
         volumenText.text = "Volumen:" + volumen;
     }
 }
