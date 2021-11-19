@@ -34,22 +34,15 @@ public class UIvidas : MonoBehaviour
 
         print(vidass);
 
-       if(vidass <= 0)
-        {
-            StopCoroutine("Puntuacion");
-        }
-
+       ScoreText.text = "Score: " + score++;
 
     }
 
     IEnumerator Puntuacion()
     {
-
-        if (true)
-        {
-            ScoreText.text = "Score: " + score++;
-        }
-        yield return new WaitForSeconds(0.5f);
+        
+        
+        yield return null;
         
     }
 

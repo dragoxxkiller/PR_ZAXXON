@@ -26,7 +26,7 @@ public class InitGame : MonoBehaviour
 
         if (alive)
         {
-            spaceshipSpeed += 0.009f;
+            spaceshipSpeed += 0.005f;
         }
 
     }
