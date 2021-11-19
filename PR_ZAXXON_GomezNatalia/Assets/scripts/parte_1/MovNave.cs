@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 
@@ -104,10 +105,19 @@ public class MovNave : MonoBehaviour
 
             UIvidas.vidass--;
 
+            Destroy(other.gameObject);
 
-            initGame.spaceshipSpeed = 0f;
+            if (UIvidas.vidass <= 0)
+            {
+                initGame.spaceshipSpeed = 0f;
 
-            initGame.alive = false;
+                 initGame.alive = false;
+
+                SceneManager.LoadScene("GaameOver");
+
+            }
+
+            
 
 
            

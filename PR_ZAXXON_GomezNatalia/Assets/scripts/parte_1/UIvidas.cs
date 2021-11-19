@@ -8,7 +8,7 @@ public class UIvidas : MonoBehaviour
 
     [SerializeField] Image vidas;
     [SerializeField] Sprite[] monedas;
-
+    
     public static int vidass = 2;
 
 
@@ -25,8 +25,11 @@ public class UIvidas : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        vidas.sprite = monedas[vidass];
+        if(vidass >= 0 && vidass < monedas.Length)
+        {
+            vidas.sprite = monedas[vidass];
+        }
+        
 
         print(vidass);
 
