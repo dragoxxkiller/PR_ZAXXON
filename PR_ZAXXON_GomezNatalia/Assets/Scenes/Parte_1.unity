@@ -959,7 +959,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spaceshipSpeed: 0
-  alive: 0
+  alive: 1
 --- !u!4 &1226893014
 Transform:
   m_ObjectHideFlags: 0
