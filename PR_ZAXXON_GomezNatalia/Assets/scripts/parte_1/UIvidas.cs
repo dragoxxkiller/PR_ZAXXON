@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class UIvidas : MonoBehaviour
 {
     [SerializeField] Text ScoreText;
-    float score = 0;
+    [SerializeField] float score = 0;
     [SerializeField] Image vidas;
     [SerializeField] Sprite[] monedas;
     
@@ -45,5 +45,9 @@ public class UIvidas : MonoBehaviour
         yield return null;
         
     }
+
+
+    
+
 
 }
