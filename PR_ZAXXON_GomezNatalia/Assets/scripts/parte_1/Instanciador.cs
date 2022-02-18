@@ -11,9 +11,8 @@ public class Instanciador : MonoBehaviour
     [SerializeField] GameObject columna;
     [SerializeField] Transform instantiatePos;
 
-
-
-
+    InitGame initGame;
+    [SerializeField] GameObject initObject;
 
     IEnumerator CrearColumna()
     {
@@ -35,10 +34,13 @@ public class Instanciador : MonoBehaviour
 
 
 
+        // Intentando instanciar mas columnas cuanto mas rapido va
 
+        initObject = GameObject.Find("InitGame");
+        // initGame = initObject.GetComponent<spaceshipSpeed>();
+        //* spaceshipSpeed
 
-
-        intervalo = 0.4f;
+        intervalo = 0.4f ; 
 
 
         StartCoroutine("CrearColumna");
