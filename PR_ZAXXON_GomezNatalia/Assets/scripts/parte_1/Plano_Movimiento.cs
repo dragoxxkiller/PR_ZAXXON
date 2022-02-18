@@ -25,7 +25,7 @@ public class Plano_Movimiento : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        scrollSpeed = initGame.spaceshipSpeed / 2;
+        scrollSpeed = initGame.spaceshipSpeed / 17;
         float offset = Time.time * scrollSpeed;
         despl = new Vector2(0, -offset);
         rend.material.SetTextureOffset("_MainTex", despl);
