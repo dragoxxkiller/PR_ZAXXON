@@ -30,6 +30,7 @@ public class Columna1_1 : MonoBehaviour
 
         // speed = 25f;
         transform.Translate(Vector3.back * Time.deltaTime * speed);
+        
 
         float posZ = transform.position.z;
         if(posZ < -20)

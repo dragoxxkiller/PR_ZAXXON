@@ -102,12 +102,13 @@ public class MovNave : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        print("He chocao con " + other.gameObject.tag);
+        print("He chocao con " + other.gameObject.name + " - " + other.gameObject.tag);
         if (other.gameObject.tag == "Obstaculo")
         {
 
 
             UIvidas.vidass--;
+            
 
             Destroy(other.gameObject);
 

@@ -12,22 +12,22 @@ public class InitGame : MonoBehaviour
 
     AudioSource musicVolume;
 
-
+    public float score;
+    public float mySlider;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        //Accedemos al componente de la música que está en el canvas
-        musicVolume = GameObject.Find("Canvas").GetComponent<AudioSource>();
-        //Ponemos el volumen al que tengamos configurado
-        musicVolume.volume = Volumen.musicVolume;
-        //Ponemos el slider al volumen configurado
-        mySlider.value = Volumen.musicVolume;
+
+        
+        musicVolume = GameObject.Find("Sonido_empty").GetComponent<AudioSource>();
+        
+        musicVolume.volume = GameManager.musicVolume;
+       
 
         spaceshipSpeed = 25f;
 
-        mySlider = GameObject.Find("Volumen").GetComponent<mySlider>();
     }
 
     // Update is called once per frame
@@ -40,14 +40,16 @@ public class InitGame : MonoBehaviour
             spaceshipSpeed += 0.005f;
         }
 
+
     }
 
     void Morir()
     {
+        score = GameObject.Find("Canvas").GetComponent<UIvidas>().score;
         //Comprobar HS
-        if (Score > GameManager.HighScore)
+        if (score > GameManager.HighScore)
         {
-            GameManager.HighScore = Score;
+            GameManager.HighScore = score;
 
         }
         spaceshipSpeed = 0f;
@@ -56,11 +58,6 @@ public class InitGame : MonoBehaviour
 
     }
 
-    public void SetVolume()
-    {
-
-        musicVolume.volume = volumeSlider.value;
-    }
 
 
 

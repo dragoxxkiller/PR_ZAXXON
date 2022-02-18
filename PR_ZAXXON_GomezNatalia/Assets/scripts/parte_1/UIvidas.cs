@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class UIvidas : MonoBehaviour
 {
     [SerializeField] Text ScoreText;
-    [SerializeField] float score = 0;
+    [SerializeField] public float score = 0;
     [SerializeField] Image vidas;
     [SerializeField] Sprite[] monedas;
     
@@ -17,7 +17,7 @@ public class UIvidas : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        vidass = 3;
         StartCoroutine("Puntuacion");
 
 
@@ -32,7 +32,7 @@ public class UIvidas : MonoBehaviour
         }
         
 
-        print(vidass);
+        //print(vidass);
 
        ScoreText.text = "Score: " + score++;
 

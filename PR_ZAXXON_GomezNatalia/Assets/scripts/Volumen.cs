@@ -7,13 +7,13 @@ using UnityEngine.UI;
 public class Volumen : MonoBehaviour
 {
     [SerializeField] Text volumenText;
-    float Musicvolumen;
     [SerializeField] Slider mySlider;
 
     AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
     {
+        mySlider.value = GameManager.musicVolume;
         volumenText.text = "Volumen:" + mySlider.value;
 
         audioSource = GetComponent<AudioSource>();
@@ -30,8 +30,8 @@ public class Volumen : MonoBehaviour
     }
     public void SubirVolumen()
     {
-        Musicvolumen = ((int)
+        GameManager.musicVolume = ((int)
             mySlider.value);
-        volumenText.text = "Volumen:" + Musicvolumen;
+        volumenText.text = "Volumen:" + GameManager.musicVolume;
     }
 }

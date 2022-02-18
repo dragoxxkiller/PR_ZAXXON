@@ -36,7 +36,7 @@ public class Instanciador : MonoBehaviour
 
         // Intentando instanciar mas columnas cuanto mas rapido va
 
-        initObject = GameObject.Find("InitGame");
+       // initObject = GameObject.Find("InitGame");
         // initGame = initObject.GetComponent<spaceshipSpeed>();
         //* spaceshipSpeed
 
