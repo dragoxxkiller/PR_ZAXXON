@@ -62,4 +62,12 @@ public class Botone_UI : MonoBehaviour
 
 
     }
+
+
+
+    
+
+
+
+
 }

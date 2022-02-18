@@ -16,11 +16,15 @@ public class MovNave : MonoBehaviour
 
     private Vector3 cubePosition = new Vector3(0, 0, 0);
 
+    AudioSource audiosource;
+
+
+
     // Start is called before the first frame update
     void Start()
     {
 
-        
+        audiosource = GetComponent<AudioSource>();
 
         SpeedHeight = 10F;
 
