@@ -11,21 +11,22 @@ public class MovNave : MonoBehaviour
     public float SpeedSides;
     public float SpeedHeight;
     public float RotationSpeed;
+    [SerializeField] AudioClip grito;
 
     InitGame initGame;
 
     private Vector3 cubePosition = new Vector3(0, 0, 0);
 
     AudioSource audiosource;
-
-
+    public Renderer rend;
+    AudioSource adiosource;
 
     // Start is called before the first frame update
     void Start()
     {
 
         audiosource = GetComponent<AudioSource>();
-
+       // adioSource = AudioClip grito;
         SpeedHeight = 10F;
 
         SpeedSides = 10f;
@@ -114,12 +115,12 @@ public class MovNave : MonoBehaviour
 
             if (UIvidas.vidass <= 0)
             {
+                //Moricion();
                 initGame.spaceshipSpeed = 0f;
 
-                 initGame.alive = false;
+                initGame.alive = false;
 
                 SceneManager.LoadScene("GaameOver");
-
             }
 
             
@@ -131,7 +132,12 @@ public class MovNave : MonoBehaviour
         }
     }
 
-
+   /* void Moricion()
+    {
+      
+        audioSource.PlayOneShot(grito, 1f);
+       
+    }*/
 
 
 }
